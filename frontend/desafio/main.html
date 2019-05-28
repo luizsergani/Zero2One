@@ -1,0 +1,119 @@
+
+
+<html>
+  <head>
+  	<meta charset="UTF-8">
+    <title>Listagem de Tarefas</title>
+  </head>
+  <body>
+  	<div>
+        <h1 class="titulo"> <center> Desafio 1</center> </h1>
+     </div>
+
+     <div>
+        <h2> <strong>Tarefas</strong></h2>
+        <br>
+        Tarefa 1 <input type="checkbox" name="tarefa1" id="tarefa1" >
+  		<br>
+        Tarefa 2 <input type="checkbox" name="tarefa2" id="tarefa2" >
+        <br>
+        Tarefa 3 <input type="checkbox" name="tarefa3" id="tarefa3" >
+        <br>
+        <input class = "botao" type="button" onclick="myFunction()" value="Tarefas Concluídas"> 
+     </div>
+
+<!--  DIV INICIAL - MODELO BÁSICO
+     <div>
+     	<h2>Concluídas</h2>
+     	<table border="2">
+		<tr>
+		<td> <strong>Tarefas</strong> </td>
+		<td> <strong> Concluídas</strong> </td>
+		</tr>
+		<tr>
+		<td>Tarefa 1</td>
+		<td> <input type="checkbox" name="tarefa1_copy" id="tarefa1_copy" ></td>
+		</tr>
+		<tr>
+		<td>Tarefa 2</td>
+		<td> <input type="checkbox" name="tarefa2_copy" id="tarefa2_copy" ></td>
+		</tr>
+		<tr>
+		<td>Tarefa 3</td>
+		<td> <input type="checkbox" name="tarefa3_copy" id="tarefa3_copy" ></td>
+		</tr>
+		</table>
+
+     </div>
+ -->
+
+ 	
+     	<h2>Concluídas</h2>
+     	<div class="Tabela" id="Tabela">
+     	<table border="2">
+		<tr>
+		<td> <strong>Tarefas</strong> </td>
+		<td> <strong> Concluídas</strong> </td>
+		</tr>
+		<tr id="tr1">
+		<td>Tarefa 1</td>
+		<td> <input type="checkbox" name="tarefa1_copy" id="tarefa1_copy" checked></td>
+		</tr>
+		<tr id="tr2">
+		<td>Tarefa 2</td>
+		<td> <input type="checkbox" name="tarefa2_copy" id="tarefa2_copy" checked ></td>
+		</tr>
+		<tr id="tr3">
+		<td>Tarefa 3</td>
+		<td> <input type="checkbox" name="tarefa3_copy" id="tarefa3_copy" checked ></td>
+		</tr>
+		</table>
+
+     </div>
+
+     <script>
+     	function myFunction(){
+
+     	if ( document.getElementById('tarefa1').checked == true){
+     		document.getElementById('tr1').style.display = "table-row";
+     	}
+     	else	document.getElementById('tr1').style.display = "none"; 
+
+     	if ( document.getElementById('tarefa2').checked == true){
+     		document.getElementById('tr2').style.display = "table-row";
+     	}
+     	else	document.getElementById('tr2').style.display = "none"; 
+
+     	if ( document.getElementById('tarefa3').checked == true){
+     		document.getElementById('tr3').style.display = "table-row";
+     	}
+     	else	document.getElementById('tr3').style.display = "none"; 
+     	
+     	// Formato Básico
+     	// document.getElementById('tarefa1_copy').checked = document.getElementById('tarefa1').checked;
+     	// document.getElementById('tarefa2_copy').checked = document.getElementById('tarefa2').checked;
+     	// document.getElementById('tarefa3_copy').checked = document.getElementById('tarefa3').checked;
+     	}
+     </script>
+
+      <!--   <br>
+        <label for="Valor">Valor:</label> 
+        <br>
+        <input type="number" name="Valor" id="valor" placeholder="Valor">
+        <br>
+        <label for="Descricao">Descricao (máx 100 caracteres)</label>
+        <br>
+        <textarea name="Descricao" id="descricao" cols="30" rows="10" maxlength="100"></textarea>
+        <br>
+       PARA EM UM FUTURO COLOCAR UMA IMAGEM AO INVÉS DE UM LINK
+        <label for="Imagem">Adicionar alguma imagem?</label>
+        <input type="file" name="imagem">
+        
+        <label for="URL">Link imagem</label>
+        <input type="url" name="URL" id="URL" placeholder="Link">
+        <br>
+        <button type="submit" onClick="dadosBotao()">Postar produto</button>
+        -->
+   
+  </body>
+</html>
